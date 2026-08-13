@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas em HTML</title>
+    <style>
+      mark{
+
+        background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com lista</h1>
+    <h2>Lista ordenadas</h2>
+ <ol type = "I"> <!--1 A a I i-->
+    <li>Acordar</li>
+    <li>Tomar café</li>
+    <li>Escovar os dentes</li>
+ </ol>
+ <h2>Lista não Ordenadas</h2>
+  <ul  type ="circle"> <!--disc circle square-->
+    <li>Pão</li>
+    <li>Tomate</li>
+    <li>Macarrão</li>
+    <li>Suco</li>
+    <li>Leite</li>
+  </ul>
+  
+  <h2>Minhas linguagens favoritas</h2>
+  <ol>
+    <li>Antigas</li>
+    <ol type="a">
+      <li>Clipper</li>
+      <li>Visual Basic</li>
+      <li>Portugol</li>
+    </ol>
+    <li>Novas</li>
+    <ol type="a" start="4">
+      <li>C</li>
+      <li>Java</li>
+      <li>Java Script</li>
+    </ol>
+  </ol>
+  <h2>Meus Jogos Favoritos</h2>
+  <ol>
+    <li>Ps2</li>
+    <ul type = "square">
+      <li>God of War</li>
+      <li>Skate</li>
+    </ul>
+    <li>Xbox</li>
+    <ul type = "square">
+      <li><mark style="background-color: red;">Tomb Raider</mark></li>
+      <ul type = "circle">
+        <li><mark>Tomb Raider Shadow</mark></li>
+        <li><mark>Tomb Raider Neve</mark></li>
+      </ul>
+      <li><mark style="background-color: red;">Minecraft</mark></li>
+      <ul>
+      <li><mark style="background-color: red;">Call of Duty</mark></li>
+      <li> <mark style="background-color: blue;">Call of Duty Advanced </mark></li>
+      </ul>
+    </ul>
+    <li>Pc</li>
+    <ul type = "square">
+      <li><mark style="background-color: red;">God of war</mark></li>
+      <ul type = "circle">
+        <li><mark>God of war 1</mark></li>
+        <li><mark>God of war 2</mark></li>
+        <li><mark>God of war 3</mark></li>
+        <li><mark>God of war Ragnarok</mark></li>
+      </ul>
+      <li>The last Of Us</li>
+      <ul type = "circle">
+        <li>The Last Of Us Parte 2</li>
+      </ul>
+      <li>Ghost of Tsunima</li>
+      <li>Fivem</li>
+    </ul>
+  </ol>
+  <h2>Lista de Definiçoes</h2>
+  <dl>
+     <dt>HTML</dt><!--TERMO-->
+     <dd>Liguagem de Marcação para a criação do conteúdo de um site</dd><!--Descrição-->
+     <dt>CSS</dt><!--TERMO-->
+     <dd>Linguagem de Marcação para a criação do design</dd><!--Descrição-->
+    <dt>Fivem</dt>
+    <dd>Gta online que simular a vida real</dd>
+    <br>
+    <dt>Call of Duty</dt>
+    <dd>Jogo de Ação e estrategia de tiro</dd>
+  </dl>
+</body>
+</html>
