@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Vaga de Estágio SENAI</title>
+    
+</head>
+<body>
+    <h1>Inscrição para Vaga de Estágio - SENAI</h1>
+    <p>Preencha os campos abaixo para se candidatar à vaga.</p>
+
+    <form action="index.html" method="POST" enctype="multipart/form-data">
+    
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            
+            <p>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+            </p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Formação Acadêmica</legend>
+            
+            <p>
+                <label for="escolaridade">Escolaridade:</label><br>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="" disabled selected>Selecione sua escolaridade</option>
+                    <option value="fundamental">Fundamental</option>
+                    <option value="medio">Médio</option>
+                    <option value="tecnico">Técnico</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+
+        
+        <fieldset>
+            <legend>Disponibilidade de Horário</legend>
+            
+            <p>
+                <input type="radio" id="manha" name="disponibilidade" value="manha" required>
+                <label for="manha">Manhã</label>
+                <br>
+                <input type="radio" id="tarde" name="disponibilidade" value="tarde">
+                <label for="tarde">Tarde</label>
+                <br>
+                <input type="radio" id="noite" name="disponibilidade" value="noite">
+                <label for="noite">Noite</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+        
+        <fieldset>
+            <legend>Conhecimentos Prévios</legend>
+            
+            <p>
+                <input type="checkbox" id="office" name="conhecimentos" value="pacote_office">
+                <label for="office">Pacote Office</label>
+                <br>
+                <input type="checkbox" id="ingles" name="conhecimentos" value="ingles">
+                <label for="ingles">Inglês</label>
+                <br>
+                <input type="checkbox" id="logica" name="conhecimentos" value="logica">
+                <label for="logica">Lógica</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+     
+        <fieldset>
+            <legend>Anexo de Documento</legend>
+            
+            <p>
+                <label for="curriculo">Envie seu Currículo (Apenas PDF):</label><br>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf" required>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Candidatar-se</button>
+
+    </form>
+
+</body>
+</html>
