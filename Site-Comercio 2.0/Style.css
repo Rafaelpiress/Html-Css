@@ -1,0 +1,411 @@
+/*Configurando o menu */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+body{
+    background-color: #ced9e4;
+    padding-top: 150px;
+    
+
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #033064;
+    color: rgb(243, 243, 243);
+    padding: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    
+}
+.menu a{
+    font-weight: bold;
+    color: rgb(248, 247, 247);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+.imagenT{
+    width: 150px;
+}
+.menu a:hover {
+    color: #cccccc;
+}
+
+.conteudo h1{
+  margin-top: 120px; 
+  color: #020202;
+  font-weight: bold;
+}
+/*--------------------------------------------- Tela Inicial-------------------------------------------------*/
+
+/* Configuração e espaçamento do bloco principal */
+.caixa-inicio {
+  max-width: 900px; /* Largura equilibrada para textos mais longos */
+  margin: 14px auto 50px auto; /* Afasta o conteúdo do menu superior fixo */
+  padding: 0 20px;
+  color: #000000;
+  
+}
+/* Espaçamento entre os blocos de assunto */
+.secao-informativa {
+  margin-bottom: 40px;
+}
+
+/* Estilo do título principal da página */
+.secao-informativa h1 {
+  font-size: 34px;
+  color: #033064; /* Azul característico da identidade */
+  margin-bottom: 20px;
+}
+
+/* Estilo dos títulos secundários */
+.secao-informativa h2 {
+  font-size: 24px;
+  color: #033064;
+  border-bottom: 2px solid #033064; /* Linha sutil divisória */
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+/* Estilo de todos os parágrafos */
+.secao-informativa p {
+  font-size: 18px;
+  line-height: 1.6; /* Deixa a leitura dos textos longos mais agradável */
+  margin-bottom: 15px;
+  color: #000000; /* Cinza claro para não cansar as vistas */
+}
+
+/* Estilo das listas de produtos e pagamentos */
+.secao-informativa ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.secao-informativa li {
+  font-size: 15.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #000000;
+}
+/*---------------------------------------------Parte da pagina QUEM-SOMOS-------------------------------------------------*/
+
+.conteudo h2{
+    font-weight: bold;
+}
+
+/* Container Principal (Afastado do menu fixed do topo) */
+.sobre-principal {
+  max-width: 1100px;
+  margin: 50px auto 60px auto; 
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Seção de Apresentação */
+.secao-destaque h1 {
+  font-size: 40px;
+  color: #033064; 
+  margin-bottom: 15px;
+}
+
+.secao-destaque p {
+  font-size: 17px; 
+  line-height: 1.6;
+  color: #050505;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.secao-destaque .destaque {
+  font-size: 19px; 
+  color: #000000;
+  
+}
+
+.caixa-estatisticas {
+  display: grid; /* Ativa o sistema de grade */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribui os cartões de informação de forma responsiva */
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.cartao-numero{
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;  /* cria uma animação suave*/
+  
+}
+
+.cartao-numero:hover {
+  transform: translateY(-5px);
+  border-color: #033064;
+}
+
+.cartao-numero h2 {
+  font-size: 35px; 
+  color: #033064;
+  margin-bottom: 5px;
+}
+
+.cartao-numero p {
+  font-size: 15px; 
+  color: #000000;
+}
+
+.sobre-secoes {
+  display: grid; /* Ativa o sistema de grade */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Distribui os cartões de informação de forma responsiva */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #033064;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.info-card h3 {
+  font-size: 20px; 
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.info-card p {
+  font-size: 15.68px; 
+  line-height: 1.5; /* Altura da linha para melhor leitura do texto longo */
+  color: #0a0a0a;
+}
+
+/*--------------------------------------------------------Tela De Produtos----------------------------------------------------------- */
+/* Grade Automático (Ajusta sozinho na tela do PC e Celular) */
+.grade-Produto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+/* Card Individual do Produto */
+.card-produto {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Borda fina muito sutil ao redor do produto */
+  border-radius: 8px;
+  padding: 15px; /*  Espaçamento interno em todos os lados do cartão */
+  display: flex; /*  linha/coluna */
+  flex-direction: column;  /* Organiza os itens de cima para baixo (em coluna) */
+  justify-content: space-between; /* Distribui os itens verticalmente empurrando o botão para a base */
+  transition: transform 0.2s ease, border-color 0.2s ease; /* Efeito suave de animação ao passar o mouse */
+}
+
+.card-produto:hover {
+  transform: translateY(-5px); /* Levanta levemente o cartão do produto */
+  border-color: #58a6ff;
+}
+/* Imagem do Produto */
+.card-produto img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain; /* Não distorce a imagem */
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+/* Título do Produto */
+.card-produto h3 {
+  font-size: 14px; 
+  line-height: 1.3; /* Espaçamento entre as linhas do título */
+  color: #e5e7eb;
+  margin-bottom: 10px; /* Espaço entre o título e os blocos de preço */
+  height: 38px; /* Mantém os cards alinhados */
+}
+
+/* Preços e Condições */
+.preco-antigo {
+  font-size: 12.8px; 
+  color: #9ca3af;
+  text-decoration: line-through; /*Texto fica como Se fosse deletado*/
+}
+
+.preco-atual {
+  font-size: 22px; 
+  font-weight: bold;
+  color: #fafafa; /* Cor em destaque para o preço */
+  margin: 3px 0; /* Pequena margem de 3px acima e abaixo do preço atual */
+}
+
+.condicao {
+  font-size: 12.8px; 
+  color: #10b981; /* Verde do PIX */
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+/* Botão Comprar */
+.btn-comprar {
+  background-color: #033064; /* Laranja chamativo estilo e-commerce */
+  color: #ffffff;
+  border: none;  /* Remove as bordas padrão do navegador */
+  padding: 10px;   /* serve para criar um espaçamento interno de 10 pixels em todos os quatro lados (cima, baixo, esquerda e direita) */
+  border-radius: 5px;
+  font-weight: bold; 
+  font-size: 14.4px; 
+  cursor: pointer; /*Transforma a seta do mouse naquela "mãozinha" com o dedo indicador*/
+  transition: background-color 0.2s ease;  /*Controla a velocidade e a suavidade da mudança de cor do fundo do botão.*/
+  width: 100%;
+}
+
+.btn-comprar:hover {
+  background-color: #2066b6;
+}
+
+/*--------------------------------------------------------Página CADASTRO (visual, sem back-end)----------------------------------------------------------- */
+.caixa-cadastro {
+  max-width: 420px;
+  margin: 20px auto 60px auto;
+  padding: 0 20px;
+}
+
+.caixa-cadastro h1 {
+  font-size: 30px;
+  color: #033064;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitulo-form {
+  font-size: 15px;
+  color: #333333;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.card-form {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.campo-form {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-form label {
+  font-size: 14px;
+  color: #033064;
+  margin-bottom: 6px;
+}
+
+.campo-form input {
+  padding: 10px 12px;
+  border: 1px solid #c3c3c3;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.campo-form input:focus {
+  outline: none;
+  border-color: #033064;
+}
+
+.btn-cadastrar {
+  background-color: #033064;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.btn-cadastrar:hover {
+  background-color: #02203f;
+}
+
+
+/*--------------------------------------------------------Página FALE CONOSCO----------------------------------------------------------- */
+
+.caixa-contato {
+  max-width: 650px;
+  margin: 20px 0 60px 0;
+  padding: 0 20px;
+}
+
+.caixa-contato h1 {
+  font-size: 32px;
+  color: #033064;
+  margin-bottom: 10px;
+}
+
+.caixa-contato > p {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.cartao-contato {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.icone-contato {
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #033064;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-contato h3 {
+  font-size: 15px;
+  color: #033064;
+  margin-bottom: 4px;
+}
+
+.info-contato p {
+  font-size: 16px;
+  color: #000000;
+  font-weight: normal;
+}
