@@ -1,0 +1,458 @@
+/* =========================================================
+   RESET / CONFIGURAÇÃO INICIAL
+   ========================================================= */
+
+/* 
+   O * seleciona TODOS os elementos HTML da página.
+   Isso remove as configurações padrão do navegador.
+*/
+* {
+    /* Remove a margem padrão dos elementos */
+    margin: 0;
+
+    /* Remove o espaçamento interno padrão */
+    padding: 0;
+
+    /*
+       Faz com que o width e height incluam
+       também o padding e a borda do elemento.
+    */
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+    /*
+       Define a fonte utilizada na página.
+       O navegador tenta usar Arial primeiro.
+       Se não tiver, tenta Helvetica.
+       Se também não tiver, usa qualquer fonte sem serifa.
+    */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*
+       Define a cor de fundo da página.
+
+       RGB significa:
+       R = vermelho
+       G = verde
+       B = azul
+
+       238, 238, 238 = cinza claro.
+    */
+    background-color: rgb(238, 238, 238);
+
+    /*
+       Define a cor padrão dos textos.
+       #222 é um cinza bem escuro.
+    */
+    color: #222;
+
+    /*
+       Cria 130px de espaço na parte de cima da página.
+
+       Isso é necessário porque o menu está com
+       position: fixed e ficaria sobre o conteúdo.
+    */
+    padding-top: 130px;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu {
+
+    /*
+       Fixa o menu na tela.
+
+       Mesmo que o usuário role a página,
+       o menu continua no mesmo lugar.
+    */
+    position: fixed;
+
+    /* Coloca o menu no topo da tela */
+    top: 0;
+
+    /* Coloca o menu encostado no lado esquerdo */
+    left: 0;
+
+    /*
+       Faz o menu ocupar 100% da largura da tela.
+    */
+    width: 100%;
+
+    /* Cor de fundo do menu */
+    background-color: #1a1a1a;
+
+    /* Cor padrão dos textos dentro do menu */
+    color: white;
+
+    /*
+       Espaçamento interno do menu.
+       Cria 20px de espaço dentro dele.
+    */
+    padding: 20px;
+
+    /*
+       Centraliza os textos dentro do menu.
+    */
+    text-align: center;
+
+    /*
+       Define a camada do menu.
+
+       1000 é um valor alto para garantir que
+       o menu fique por cima dos outros elementos.
+    */
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   TÍTULO DO MENU
+   ========================================================= */
+
+.menu h1 {
+
+    /*
+       Cria 15px de espaço abaixo do título.
+    */
+    margin-bottom: 15px;
+
+    /*
+       Define o tamanho da fonte do título.
+    */
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO DO MENU
+   ========================================================= */
+
+.menu nav {
+
+    /*
+       Ativa o Flexbox.
+
+       Os elementos dentro do nav passam a ser
+       organizados de maneira flexível.
+    */
+    display: flex;
+
+    /*
+       Centraliza os elementos horizontalmente.
+    */
+    justify-content: center;
+
+    /*
+       Cria 25px de espaço entre cada elemento.
+    */
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LINKS DO MENU
+   ========================================================= */
+
+.menu a {
+
+    /* Deixa os links brancos */
+    color: white;
+
+    /*
+       Remove o sublinhado padrão dos links.
+    */
+    text-decoration: none;
+
+    /*
+       Deixa o texto em negrito.
+    */
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HOVER DOS LINKS
+   ========================================================= */
+
+/*
+   :hover significa:
+
+   "Quando o mouse estiver em cima do elemento".
+*/
+.menu a:hover {
+
+    /*
+       Quando passar o mouse sobre o link,
+       ele muda de branco para cinza.
+    */
+    color: #cccccc;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL
+   ========================================================= */
+
+main {
+
+    /*
+       O conteúdo ocupará 90% da largura disponível.
+    */
+    width: 90%;
+
+    /*
+       Mesmo em telas muito grandes,
+       o conteúdo não poderá passar de 900px.
+    */
+    max-width: 900px;
+
+    /*
+       0 = margem em cima e embaixo
+       auto = o navegador calcula automaticamente
+       as margens esquerda e direita.
+
+       Resultado: o elemento fica centralizado.
+    */
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARTÃO DE NOTÍCIA
+   ========================================================= */
+
+.cartao-noticia {
+
+    /*
+       Define o fundo do cartão como branco.
+    */
+    background-color: white;
+
+    /*
+       Cria 25px de espaço dentro do cartão.
+    */
+    padding: 25px;
+
+    /*
+       Cria 25px de espaço abaixo de cada cartão.
+
+       Isso separa uma notícia da outra.
+    */
+    margin-bottom: 25px;
+
+    /*
+       Arredonda os cantos do cartão.
+    */
+    border-radius: 8px;
+
+    /*
+       Cria uma sombra ao redor do cartão.
+
+       0    = deslocamento horizontal
+       2px  = deslocamento vertical
+       8px  = intensidade do desfoque
+
+       rgba:
+       0,0,0 = preto
+       0.1   = 10% de opacidade
+    */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   TÍTULO DAS NOTÍCIAS
+   ========================================================= */
+
+.cartao-noticia h2 {
+
+    /*
+       Define o tamanho do título como 24px.
+    */
+    font-size: 24px;
+
+    /*
+       Cria 15px de espaço abaixo do título.
+    */
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   PARÁGRAFOS DAS NOTÍCIAS
+   ========================================================= */
+
+.cartao-noticia p {
+
+    /*
+       Define o tamanho do texto.
+    */
+    font-size: 17px;
+
+    /*
+       Define o espaçamento entre as linhas.
+
+       1.6 significa que a altura da linha
+       será 1.6 vezes o tamanho da fonte.
+
+       Isso deixa o texto mais confortável para ler.
+    */
+    line-height: 1.6;
+
+    /*
+       Cria 10px de espaço abaixo do parágrafo.
+    */
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   NOTÍCIA PRINCIPAL
+   ========================================================= */
+
+/*
+   Aqui estamos selecionando apenas o <h2>
+   que estiver dentro de um elemento com
+   a classe .noticia-principal.
+*/
+.noticia-principal h2 {
+
+    /*
+       O título da notícia principal será maior
+       que os títulos das outras notícias.
+    */
+    font-size: 36px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/*
+   @media serve para criar regras diferentes
+   dependendo do tamanho da tela.
+
+   Neste caso:
+
+   Se a tela tiver no máximo 600px de largura,
+   serão utilizadas as regras abaixo.
+
+   É principalmente para celulares.
+*/
+@media (max-width: 600px) {
+
+
+    /* -----------------------------------------------------
+       BODY NO CELULAR
+       ----------------------------------------------------- */
+
+    body {
+
+        /*
+           Aumenta o espaço superior.
+
+           Isso acontece porque o menu pode ficar
+           maior quando os links quebram para outra linha.
+        */
+        padding-top: 170px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU NO CELULAR
+       ----------------------------------------------------- */
+
+    .menu nav {
+
+        /*
+           Permite que os links do menu quebrem
+           para uma nova linha quando não houver espaço.
+
+           Exemplo:
+
+           Início   Notícias
+           Contato  Sobre
+        */
+        flex-wrap: wrap;
+
+        /*
+           Diminui o espaço entre os links
+           no celular.
+        */
+        gap: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULO DO MENU NO CELULAR
+       ----------------------------------------------------- */
+
+    .menu h1 {
+
+        /*
+           Diminui o tamanho do título.
+
+           Desktop = 28px
+           Celular = 24px
+        */
+        font-size: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULO DA NOTÍCIA PRINCIPAL NO CELULAR
+       ----------------------------------------------------- */
+
+    .noticia-principal h2 {
+
+        /*
+           Diminui o título da notícia principal.
+
+           Desktop = 36px
+           Celular = 28px
+        */
+        font-size: 28px;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULOS DOS CARTÕES NO CELULAR
+       ----------------------------------------------------- */
+
+    .cartao-noticia h2 {
+
+        /*
+           Diminui os títulos dos cartões.
+
+           Desktop = 24px
+           Celular = 21px
+        */
+        font-size: 21px;
+    }
+
+
+    /* -----------------------------------------------------
+       TEXTO DOS CARTÕES NO CELULAR
+       ----------------------------------------------------- */
+
+    .cartao-noticia p {
+
+        /*
+           Diminui um pouco o tamanho do texto.
+
+           Desktop = 17px
+           Celular = 16px
+        */
+        font-size: 16px;
+    }
+}
